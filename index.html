@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mademoiselle Nina - Boutique en Ligne</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <script src="script.js" defer></script> 
+</head>
+<body>
+    <header>
+        <h1>Mademoiselle Nina</h1>
+        <p class="order-info">Découvrez nos créations artisanales uniques. Cliquez sur les articles pour les sélectionner, puis envoyez-nous votre commande.</p>
+        <div class="order-info">
+            <span>Articles sélectionnés : </span><span id="selected-count">0</span>
+        </div>
+        <nav>
+            <button onclick="location.href='about.html'" class="about-button">Notre Histoire</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="product-grid" class="product-grid">
+            <!-- Les articles seront insérés dynamiquement ici -->
+        </section>
+        <button id="send-email-button" class="send-email-button">Envoyer la commande</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mademoiselle Nina. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Modale pour zoom d'image -->
+    <div id="image-modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-image">
+        <div id="caption"></div>
+    </div>
+</body>
+</html>
