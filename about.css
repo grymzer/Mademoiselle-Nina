@@ -1,77 +1,164 @@
-/* Styles généraux */
+/* --- Styles globaux --- */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom right, #f7f7f7, #eaeaea);
     margin: 0;
     padding: 0;
+    background-color: #f7f3eb;
     color: #333;
 }
 
-/* Header */
+/* --- Header --- */
 header {
-    text-align: center;
     background-color: #ffffff;
     padding: 20px 40px;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    max-width: 800px;
-}
-
-/* Header title */
-header h1 {
-    font-size: 2rem;
-    color: #4A4A4A;
-    margin: 0;
-}
-
-/* Section principale */
-.about-page {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    min-height: 80vh;
-    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    text-align: center;
 }
 
-/* Cadre flou avec fond transparent */
-.blurred-background {
-    background: rgb(255, 253, 253); /* Presque transparent */
-    backdrop-filter: blur(25px); /* Intensité du flou augmentée */
-    -webkit-backdrop-filter: blur(25px); /* Compatibilité pour Safari */
-    border-radius: 20px;
-    box-shadow: 0 4px 12px rgba(255, 253, 253, 0.2);
-    padding: 30px;
-    max-width: 800px;
-    width: 100%;
+header h1 {
+    font-size: 2.5rem;
+    color: #4A4A4A;
+    margin-bottom: 10px;
 }
 
-
-.blurred-background p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #444;
+header .order-info {
+    font-size: 1.2rem;
+    color: #6A6A6A;
     margin-bottom: 20px;
 }
 
-.blurred-background p:last-child {
-    margin-bottom: 0;
+header nav .about-button, .back-button {
+    background-color: #9a4e02;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Conteneurs avec l'effet */
+header nav .about-button:hover, .back-button:hover {
+    background-color: #c48443;
+    transform: scale(1.05);
+}
+
+/* --- Section principale --- */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+/* Grille des produits */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Produits individuels */
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 200px;
+}
+
+.product img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+h2 {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.price {
+    color: #777;
+    font-size: 1em;
+}
+
+/* --- Cases à cocher --- */
+input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #9a4e02;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #c48443;
+    border-color: #9a4e02;
+    position: relative;
+}
+
+input[type="checkbox"]:checked::before {
+    content: "✔";
+    font-size: 14px;
+    color: white;
+    position: absolute;
+    top: 2px;
+    left: 3px;
+}
+
+label {
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* --- Boutons d'envoi --- */
+#send-email-button {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.send-email {
+    text-align: center; /* Centrer horizontalement */
+    margin: 30px 0; /* Espacement au-dessus et en dessous */
+}
+
+#send-email-button:hover {
+    background-color: #555;
+}
+
+/* --- Animations interactives --- */
 .interactive {
-    perspective: 1000px; /* Nécessaire pour les effets 3D */
-}
-
-.interactive-item {
-    transition: transform 0.2s ease-out; /* Animation douce pour les mouvements */
-    transform: rotateX(0) rotateY(0); /* État de repos */
-    will-change: transform; /* Optimisation pour animations */
+    perspective: 1000px;
 }
 
 .interactive-item {
     transition: transform 0.2s ease-out;
     transform-style: preserve-3d;
+    transform: rotateX(0) rotateY(0);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     will-change: transform;
 }
@@ -80,26 +167,145 @@ header h1 {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Styles du bouton de retour */
-.back-button {
-    background-color: #9a4e02; /* Vert taupe clair */
+/* --- Media queries pour tablettes et téléphones --- */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    h1, p {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .back-button, .about-button {
+        width: 100%;
+        font-size: 14px;
+    }
+}
+footer {
+    background-color: #000; /* Fond noir */
     color: white; /* Texte blanc */
-    padding: 10px 20px; /* Espacement interne */
-    font-size: 16px; /* Taille du texte */
-    border: none; /* Supprimer les bordures */
-    border-radius: 12px; /* Coins arrondis */
-    cursor: pointer; /* Curseur de type main */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition pour un effet visuel */
+    text-align: center; /* Centrer le contenu */
+    padding: 20px 40px; /* Espacement interne */
+    border-radius: 20px; /* Bords arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    margin: 20px auto; /* Espacement autour du footer */
+    max-width: 1200px; /* Largeur maximale pour le footer */
 }
 
-/* Effet de survol (hover) */
-.back-button:hover {
-    background-color: #b9742f; /* Vert plus clair au survol */
-    transform: scale(1.05); /* Agrandissement léger */
+/* Conteneur principal du carrousel */
+.carousel {
+    position: relative;
+    width: 200px; /* Largeur du conteneur */
+    height: 200px; /* Hauteur fixe */
+    overflow: hidden; /* Masquer les images en dehors du cadre */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Conteneur pour centrer le bouton */
-.back-button-container {
-    text-align: center; /* Centrer le bouton horizontalement */
-    margin-top: 20px; /* Espacement supérieur */
+/* Images à l'intérieur du carrousel */
+.carousel-images {
+    display: flex; /* Les images s'alignent horizontalement */
+    transition: transform 0.3s ease-in-out; /* Animation fluide pour le défilement */
+    
+}
+
+/* Chaque image */
+.carousel-images img {
+    width: 100%; /* La largeur de chaque image correspond au conteneur */
+    height: 100%;
+    object-fit: cover; /* Ajuste l'image sans la déformer */
+    border-radius: 4px;
+}
+
+/* Boutons de navigation */
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Bouton gauche */
+.carousel .prev {
+    left: 10px;
+}
+
+/* Bouton droit */
+.carousel .next {
+    right: 10px;
+}
+
+/* Effet de survol sur les boutons */
+.carousel button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Style pour un article en rupture de stock */
+.product.out-of-stock {
+    opacity: 0.6; /* Rendre l'article légèrement transparent */
+    pointer-events: none; /* Désactiver les interactions */
+}
+
+/* Message pour les articles non disponibles */
+.stock-info {
+    font-size: 0.9rem;
+    color: #4CAF50; /* Couleur verte par défaut */
+}
+
+.product.out-of-stock .stock-info {
+    color: red; /* Rouge pour signaler la rupture de stock */
+}
+
+input[type="checkbox"]:disabled {
+    cursor: not-allowed; /* Afficher un curseur désactivé */
+    background-color: #e0e0e0;
+}
+
+/* Modale */
+.modal {
+    display: none; /* Masqué par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fond sombre semi-transparent */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Image zoomée uniquement */
+.modal-content {
+    max-width: 60%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    transform: scale(0); /* Départ à zéro pour l'animation */
+    transition: transform 0.3s ease; /* Animation fluide */
+}
+
+/* Supprimer tout texte (comme un caption) */
+#caption {
+    display: none; /* Masquer le caption si présent */
 }
