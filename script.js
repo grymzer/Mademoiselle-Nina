@@ -23,13 +23,6 @@ function toggleArticle(articleName, checkbox) {
     console.log("Articles sélectionnés :", selectedArticles);
 }
 
-// Fonction pour envoyer l'email de la commande
-document.getElementById('send-email-button').addEventListener('click', function () {
-    if (selectedArticles.length === 0) {
-        alert("Vous n'avez sélectionné aucun article !");
-        return;
-    }
-
    // Fonction pour envoyer l'email de la commande
 document.getElementById('send-email-button').addEventListener('click', function () {
     if (selectedArticles.length === 0) {
