@@ -30,8 +30,42 @@ document.getElementById('send-email-button').addEventListener('click', function 
         return;
     }
 
-    // Créer le corps du message avec tous les articles sélectionnés
-    const orderMessage = `Commande de Mademoiselle Nina :\n\nArticles sélectionnés :\n${selectedArticles.join("\n")}\n\nMerci de bien vouloir traiter cette commande.`;
+   // Fonction pour envoyer l'email de la commande
+document.getElementById('send-email-button').addEventListener('click', function () {
+    if (selectedArticles.length === 0) {
+        alert("Vous n'avez sélectionné aucun article !");
+        return;
+    }
+
+    // Liste des articles sélectionnés avec leur prix
+    let orderDetails = selectedArticles.map(article => {
+        return `- ${article.name} : ${article.price.toFixed(2)} €`;
+    }).join("\n");
+
+    // Calculer le total
+    let totalPrice = selectedArticles.reduce((total, article) => total + article.price, 0);
+
+    // Message final
+    const orderMessage = `
+Bonjour,
+
+Un grand merci pour ta commande et pour ton soutien à l’association.
+
+Voici le récapitulatif de ta commande :
+${orderDetails}
+
+Pour un total de : ${totalPrice.toFixed(2)} € (le prix parfait pour une bonne action).
+
+Pour régler cette belle commande, tu peux :
+
+1. M'envoyer un chèque à l’ordre de l’Association Aidons Agathe (promis, il sera encaissé avec un grand sourire).
+2. Me payer en liquide (mais attention, je n'accepte pas les chocolats en guise de monnaie, sauf exception...).
+3. Dernière option, pour les plus geeks d'entre vous, vous pouvez envoyer sur le compte Paypal de Julien au 0649009778
+
+Encore merci et à bientôt,
+Gaëlle
+07 87 48 22 09
+    `;
 
     // Simuler l'envoi par e-mail
     window.location.href = `mailto:gaelle.dallongevile@gmail.com?subject=Demande de réservation&body=${encodeURIComponent(orderMessage)}`;
