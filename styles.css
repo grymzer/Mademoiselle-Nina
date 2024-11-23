@@ -33,7 +33,7 @@ header .order-info {
     margin-bottom: 20px;
 }
 
-header nav .about-button, .back-button {
+header nav .about-button, .back-button, .aide-button {
     background-color: #9a4e02;
     color: white;
     padding: 10px 20px;
@@ -44,7 +44,7 @@ header nav .about-button, .back-button {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-header nav .about-button:hover, .back-button:hover {
+header nav .about-button:hover, .back-button:hover, .aide-button:hover {
     background-color: #c48443;
     transform: scale(1.05);
 }
