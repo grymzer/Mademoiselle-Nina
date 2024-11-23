@@ -1,0 +1,105 @@
+/* Styles généraux */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #f7f7f7, #eaeaea);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header */
+header {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+/* Header title */
+header h1 {
+    font-size: 2rem;
+    color: #4A4A4A;
+    margin: 0;
+}
+
+/* Section principale */
+.about-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 20px;
+}
+
+/* Cadre flou avec fond transparent */
+.blurred-background {
+    background: rgb(255, 253, 253); /* Presque transparent */
+    backdrop-filter: blur(25px); /* Intensité du flou augmentée */
+    -webkit-backdrop-filter: blur(25px); /* Compatibilité pour Safari */
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(255, 253, 253, 0.2);
+    padding: 30px;
+    max-width: 800px;
+    width: 100%;
+}
+
+
+.blurred-background p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.blurred-background p:last-child {
+    margin-bottom: 0;
+}
+
+/* Conteneurs avec l'effet */
+.interactive {
+    perspective: 1000px; /* Nécessaire pour les effets 3D */
+}
+
+.interactive-item {
+    transition: transform 0.2s ease-out; /* Animation douce pour les mouvements */
+    transform: rotateX(0) rotateY(0); /* État de repos */
+    will-change: transform; /* Optimisation pour animations */
+}
+
+.interactive-item {
+    transition: transform 0.2s ease-out;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    will-change: transform;
+}
+
+.interactive-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles du bouton de retour */
+.back-button {
+    background-color: #9a4e02; /* Vert taupe clair */
+    color: white; /* Texte blanc */
+    padding: 10px 20px; /* Espacement interne */
+    font-size: 16px; /* Taille du texte */
+    border: none; /* Supprimer les bordures */
+    border-radius: 12px; /* Coins arrondis */
+    cursor: pointer; /* Curseur de type main */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition pour un effet visuel */
+}
+
+/* Effet de survol (hover) */
+.back-button:hover {
+    background-color: #b9742f; /* Vert plus clair au survol */
+    transform: scale(1.05); /* Agrandissement léger */
+}
+
+/* Conteneur pour centrer le bouton */
+.back-button-container {
+    text-align: center; /* Centrer le bouton horizontalement */
+    margin-top: 20px; /* Espacement supérieur */
+}
