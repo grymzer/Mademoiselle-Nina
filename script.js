@@ -2,26 +2,22 @@
 let selectedArticles = [];
 
 // Fonction pour gérer la sélection et la désélection d'articles
-function toggleArticle(articleName, checkbox) {
+function toggleArticle(article, checkbox) {
     const selectedCountElement = document.getElementById('selected-count');
 
     if (checkbox.checked) {
-        // Ajouter l'article à la liste si la case est cochée
-        selectedArticles.push(articleName);
+        selectedArticles.push(article); // Ajouter l'article (objet entier)
     } else {
-        // Retirer l'article de la liste si la case est décochée
-        const index = selectedArticles.indexOf(articleName);
+        const index = selectedArticles.findIndex(item => item.name === article.name);
         if (index > -1) {
-            selectedArticles.splice(index, 1);
+            selectedArticles.splice(index, 1); // Retirer l'article
         }
     }
 
-    // Mettre à jour le compteur d'articles sélectionnés
     selectedCountElement.textContent = selectedArticles.length;
-
-    // Debug : Afficher la liste dans la console
     console.log("Articles sélectionnés :", selectedArticles);
 }
+
 
    // Fonction pour envoyer l'email de la commande
 document.getElementById('send-email-button').addEventListener('click', function () {
