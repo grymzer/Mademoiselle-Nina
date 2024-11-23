@@ -128,9 +128,15 @@ label {
     cursor: pointer;
 }
 
-/* --- Boutons d'envoi --- */
+.send-email {
+    display: flex; /* Utiliser Flexbox pour centrer */
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement si nécessaire */
+    margin: 30px 0; /* Espacement au-dessus et en dessous */
+}
+
 #send-email-button {
-    background-color: #333;
+    background-color: #9a4e02;
     color: #fff;
     padding: 15px 30px;
     border: none;
@@ -139,11 +145,6 @@ label {
     cursor: pointer;
     transition: background-color 0.3s ease;
     text-align: center;
-}
-
-.send-email {
-    text-align: center; /* Centrer horizontalement */
-    margin: 30px 0; /* Espacement au-dessus et en dessous */
 }
 
 #send-email-button:hover {
