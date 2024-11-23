@@ -85,17 +85,24 @@ function prevImage(button) {
     imagesContainer.style.transform = `translateX(${translateX}px)`;
 }
 
-/// Fonction pour ouvrir un zoom simple
+// Fonction pour ouvrir un zoom avec animation (image uniquement)
 function openModal(image) {
     const modal = document.getElementById('image-modal');
     const modalImage = document.getElementById('modal-image');
-    const caption = document.getElementById('caption');
 
-    modal.style.display = "block";
+    // Charger l'image dans la modale
     modalImage.src = image.src;
-    caption.textContent = image.alt;
+    modalImage.style.transform = "scale(0)"; // Départ pour l'animation
 
-    // Fermer la modale en cliquant à l'extérieur de l'image
+    modal.style.display = "flex";
+
+    // Animation de zoom
+    setTimeout(() => {
+        modalImage.style.transform = "scale(1)";
+        modalImage.style.transition = "transform 0.3s ease";
+    }, 10);
+
+    // Fermer la modale en cliquant sur le fond sombre
     modal.addEventListener('click', function (event) {
         if (event.target === modal) {
             closeModal();
@@ -103,10 +110,18 @@ function openModal(image) {
     });
 }
 
-// Fonction pour fermer le zoom
+// Fonction pour fermer la modale
 function closeModal() {
     const modal = document.getElementById('image-modal');
-    modal.style.display = "none";
+    const modalImage = document.getElementById('modal-image');
+
+    // Animation de fermeture
+    modalImage.style.transform = "scale(0)";
+    modalImage.style.transition = "transform 0.3s ease";
+
+    setTimeout(() => {
+        modal.style.display = "none";
+    }, 300);
 }
 
 // Fonction pour charger les articles depuis un fichier JSON
