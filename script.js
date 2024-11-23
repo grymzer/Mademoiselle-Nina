@@ -85,18 +85,25 @@ function prevImage(button) {
     imagesContainer.style.transform = `translateX(${translateX}px)`;
 }
 
-// Fonction pour ouvrir la modale avec une image zoomée
+/// Fonction pour ouvrir un zoom simple
 function openModal(image) {
     const modal = document.getElementById('image-modal');
     const modalImage = document.getElementById('modal-image');
     const caption = document.getElementById('caption');
 
-    modal.style.display = "flex";
+    modal.style.display = "block";
     modalImage.src = image.src;
     caption.textContent = image.alt;
+
+    // Fermer la modale en cliquant à l'extérieur de l'image
+    modal.addEventListener('click', function (event) {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
 }
 
-// Fonction pour fermer la modale
+// Fonction pour fermer le zoom
 function closeModal() {
     const modal = document.getElementById('image-modal');
     modal.style.display = "none";
