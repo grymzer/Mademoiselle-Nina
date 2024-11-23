@@ -103,9 +103,10 @@ function openModal(image) {
     }, 10);
 
     // Fermer la modale en cliquant sur le fond sombre
-    modal.addEventListener('click', function (event) {
+    modal.addEventListener('click', function closeModalOnOutsideClick(event) {
         if (event.target === modal) {
             closeModal();
+            modal.removeEventListener('click', closeModalOnOutsideClick); // Retirer l'écouteur après fermeture
         }
     });
 }
@@ -148,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             ${product.images
                                 .map(
                                     (image, index) =>
-                                        `<img src="${image}" alt="${product.name} - Image ${index + 1}" onclick="openModal(this)">`
+                                        `<img src="${image}" alt="Zoom" onclick="openModal(this)">`
                                 )
                                 .join('')}
                         </div>
