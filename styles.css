@@ -235,7 +235,7 @@ label {
         display: grid;
         grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
         gap: 10px; /* Espacement entre les produits */
-        margin: 0 10px; /* Centrer la grille */
+        margin-right: 30px; /* Centrer la grille */
         padding: 0 15px; /* Ajout de padding plus large sur les côtés */
         max-width: 100%; /* Limiter la largeur de la grille */
         box-sizing: border-box;
