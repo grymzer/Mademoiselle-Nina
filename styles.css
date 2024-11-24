@@ -253,7 +253,7 @@ label {
 
     /* Style pour chaque produit */
     .product-item {
-        max-width: calc(40% - 10px); /* Réduit la taille de l'article tout en maintenant deux articles par ligne */        
+        max-width: calc(40% - 10px)!important; /* Réduit la taille de l'article tout en maintenant deux articles par ligne */        
         text-align: center;
         padding: 10px;
         box-sizing: border-box; /* Inclut les bordures et paddings dans la largeur totale */
