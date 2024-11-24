@@ -187,8 +187,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p class="price">€${product.price.toFixed(2)}</p>
                     <p>${isOutOfStock ? '<span style="color: red;">Rupture de stock</span>' : `Stock : ${product.stock}`}</p>
                     <label>
-                        <input type="checkbox" ${isOutOfStock ? 'disabled' : ''} onchange="toggleArticle('${product.name}', this)"> Sélectionner
-                    </label>
+                    <input type="checkbox" ${isOutOfStock ? 'disabled' : ''} 
+                   onchange="toggleArticle({ name: '${product.name}', price: ${product.price} }, this)"> 
+            Sélectionner
+            </label>
                 `;
 
                 // Ajouter l'article au conteneur
