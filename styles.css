@@ -252,9 +252,11 @@ label {
 
     /* Style pour chaque produit */
     .product-item {
-        max-width: 100%; /* Adapte chaque produit à la largeur de l'écran */
+        max-width: calc(50% - 10px); /* Réduit la taille de l'article tout en maintenant deux articles par ligne */        
         text-align: center;
         padding: 10px;
+        box-sizing: border-box; /* Inclut les bordures et paddings dans la largeur totale */
+
     }
 
     .product-grid img {
