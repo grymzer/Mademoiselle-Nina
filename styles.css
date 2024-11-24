@@ -171,6 +171,7 @@ label {
 
 /* --- Media queries pour tablettes et téléphones --- */
 @media (max-width: 768px) {
+    
     header h1 {
         font-size: 1.8rem;
         margin-bottom: 10px;
@@ -217,9 +218,25 @@ label {
 }
 
 @media (max-width: 480px) {
+    
+    header, footer {
+        width: 100%; /* Utiliser toute la largeur disponible */
+        margin: 0; /* Supprimer les marges */
+        padding: 10px; /* Ajuster les espaces internes */
+        box-sizing: border-box; /* Inclure les bordures dans la largeur */
+    }
+
+    footer {
+        text-align: center; /* Centrer le contenu */
+        padding: 10px; /* Espacement compact */
+    }
+    
     .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px 10px; /* Ajoute plus d'espace vertical */
+        grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+        gap: 10px; /* Espacement régulier entre les articles */
+        margin: 0 auto; /* Centrer la grille */
+        padding: 10px; /* Espacement interne */
+        justify-content: center; /* Alignement au centre */
     }
 
     h1, p {
@@ -231,6 +248,18 @@ label {
         width: 100%;
         font-size: 14px;
     }
+    
+    body {
+        margin: 0; /* Supprime les marges globales */
+        padding: 0; /* Supprime les espacements globaux */
+    }
+
+    nav {
+        display: flex; /* Aligner les boutons horizontalement */
+        justify-content: center; /* Centrer les boutons */
+        gap: 10px; /* Espacement entre les boutons */
+    }
+    
     nav button {
     flex: 1 1 auto;
     width: 100%; /* Utilise toute la largeur */
