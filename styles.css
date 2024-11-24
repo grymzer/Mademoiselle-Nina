@@ -219,7 +219,7 @@ label {
 
 @media (max-width: 480px) {
     /* Styles communs pour le header et footer */
-    header, footer {
+    header {
         display: flex;
         justify-content: center;
         align-items: center;
