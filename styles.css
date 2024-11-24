@@ -231,20 +231,18 @@ label {
     }
 
     /* Grille de produits avec 2 colonnes */
-    .product-grid {
+     .product-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
         gap: 10px; /* Espacement entre les produits */
         margin: 0 auto; /* Centrer la grille */
-        padding: 10px; /* Espacement interne */
-        justify-content: center;
+        padding: 0 20px; /* Ajout de padding plus large sur les côtés */
         max-width: 100%; /* Limiter la largeur de la grille */
         box-sizing: border-box;
     }
-
     /* Style pour chaque produit */
     .product {
-        max-width: calc(90% - 10px); /* Réduit la taille de chaque produit */
+        max-width: 100%; /* Suppression de la limite pour s'adapter au padding */
         margin: 0 auto; /* Centre chaque produit dans sa colonne */
         padding: 10px;
         text-align: center;
