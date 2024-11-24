@@ -171,19 +171,55 @@ label {
 
 /* --- Media queries pour tablettes et téléphones --- */
 @media (max-width: 768px) {
-    .product-grid {
-        grid-template-columns: repeat(2, 1fr);
+    header h1 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
     }
 
-    .product {
-        padding: 8px;
+    header .order-info {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    .price, .stock-info {
+        font-size: 0.9rem;
+    }
+
+    .send-email {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .send-email button {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .carousel-images img {
+        border-radius: 6px;
+    }
+
+    .carousel {
+        height: auto;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav button {
+        flex: 1 1 auto;
+        max-width: 120px;
     }
 }
 
 @media (max-width: 480px) {
     .product-grid {
-        grid-template-columns: 1fr;
-        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px 10px; /* Ajoute plus d'espace vertical */
     }
 
     h1, p {
@@ -194,6 +230,24 @@ label {
     .back-button, .about-button {
         width: 100%;
         font-size: 14px;
+    }
+    nav button {
+    flex: 1 1 auto;
+    width: 100%; /* Utilise toute la largeur */
+    font-size: 0.9rem;
+}
+    .carousel {
+        width: 150px;
+        height: 150px;
+    }
+    .send-email button {
+        width: 100%; /* Prend toute la largeur */
+        max-width: none; /* Ignore la largeur maximale */
+    }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr); /* Trois colonnes */
     }
 }
 footer {
