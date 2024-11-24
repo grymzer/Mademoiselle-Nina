@@ -244,7 +244,7 @@ label {
 
     /* Style pour chaque produit */
     .product {
-        max-width: calc(60% - 10px); /* Réduit la taille de chaque produit */
+        max-width: calc(50% - 10px); /* Réduit la taille de chaque produit */
         margin: 0 auto; /* Centre chaque produit dans sa colonne */
         padding: 10px;
         text-align: center;
@@ -297,7 +297,7 @@ label {
     /* Carousel */
     .carousel {
         width: 100%;
-        max-width: 150px;
+        max-width: 250px;
         height: auto;
         margin: 0 auto; /* Centre le carousel */
     }
