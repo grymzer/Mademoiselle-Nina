@@ -219,89 +219,114 @@ label {
 
 @media (max-width: 480px) {
     
+    /* Styles communs pour le header et footer */
     header, footer {
         display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    margin: 0 auto;
-    text-align: center;
-    width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        width: 100%;
         box-sizing: border-box; /* Inclure les bordures dans la largeur */
+        margin: 0 auto;
     }
 
     footer {
-        text-align: center; /* Centrer le contenu */
-        padding: 10px; /* Espacement compact */
+        text-align: center; /* Centrer le contenu dans le footer */
     }
     
+    /* Grille de produits avec 2 colonnes */
     .product-grid {
+        display: grid;
         grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
-        gap: 10px; /* Espacement régulier entre les articles */
+        gap: 10px; /* Espacement entre les produits */
         margin: 0 auto; /* Centrer la grille */
         padding: 10px; /* Espacement interne */
         justify-content: center; /* Alignement au centre */
     }
     
-     .products-container {
+    /* Conteneur des produits avec une seule colonne sur mobile */
+    .products-container {
         display: grid;
-        grid-template-columns: 1fr; /* Une seule colonne pour mobile */
+        grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
         gap: 15px; /* Réduire l'espacement entre les produits */
         padding: 10px; /* Ajouter un léger padding */
     }
 
+    /* Style pour chaque produit */
     .product-item {
         max-width: 100%; /* Adapte chaque produit à la largeur de l'écran */
         text-align: center;
         padding: 10px;
     }
+
+    /* Conteneur principal (centré et padding autour) */
     .main-container {
-        margin: 0 auto; /* Centre le conteneur */
-        padding: 0 10px; /* Ajoute un léger padding pour éviter que les produits touchent les bords de l'écran */
+        margin: 0 auto;
+        padding: 0 10px; /* Evite que les produits touchent les bords */
+        max-width: 480px; /* Limite la largeur pour mobile */
     }
-    
+
+    /* Troncature du texte pour les titres */
     h1, h2 {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Police et alignement pour les titres et paragraphes */
     h1, p {
         font-size: 1.2rem;
         text-align: center;
     }
 
-    .back-button, .about-button {
+    /* Styles unifiés pour les boutons de navigation */
+    .back-button, .about-button, nav button {
         width: 100%;
         font-size: 14px;
+        flex: 1 1 auto; /* Flexibilité pour s'adapter à l'espace */
     }
-    
+
+    /* Suppression des marges et paddings globaux */
     body {
         margin: 0; /* Supprime les marges globales */
         padding: 0; /* Supprime les espacements globaux */
     }
 
+    /* Style de la barre de navigation */
     nav {
-        display: flex; /* Aligner les boutons horizontalement */
-        justify-content: center; /* Centrer les boutons */
+        display: flex;
+        justify-content: center; /* Centrer les boutons de la nav */
         gap: 10px; /* Espacement entre les boutons */
     }
-    
+
     nav button {
-    flex: 1 1 auto;
-    width: 100%; /* Utilise toute la largeur */
-    font-size: 0.9rem;
-}
+        width: 100%; /* Utilise toute la largeur disponible */
+        font-size: 0.9rem;
+    }
+
+    /* Ajustement de la taille du carousel */
     .carousel {
-    width: 150px;
-    height: auto; /* Ajuste automatiquement la hauteur */
-}
+        width: 100%; /* Utilise toute la largeur disponible */
+        max-width: 150px; /* Limite la largeur maximale */
+        height: auto; /* Maintient le ratio d'aspect */
+    }
+
+    /* Style du bouton dans le formulaire d'email */
     .send-email button {
         width: 100%; /* Prend toute la largeur */
         max-width: none; /* Ignore la largeur maximale */
     }
+
+    /* Centrage du texte dans le formulaire d'email */
     .send-email {
-    text-align: center;
-}
+        text-align: center;
+    }
+
+    /* Styles pour les liens dans la barre de navigation (si applicable) */
+    nav a {
+        text-decoration: none; /* Supprime les soulignements */
+        color: inherit; /* Hérite de la couleur du texte environnant */
+    }
 }
 @media (min-width: 481px) and (max-width: 768px) {
     .product-grid {
