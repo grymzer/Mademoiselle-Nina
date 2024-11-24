@@ -243,7 +243,7 @@ label {
     /* Style pour chaque produit */
     .product {
         max-width: 100%; /* Suppression de la limite pour s'adapter au padding */
-        margin: 0 auto; /* Centre chaque produit dans sa colonne */
+        margin-right: 30px; /* Centre chaque produit dans sa colonne */
         padding: 10px;
         text-align: center;
         box-sizing: border-box; /* Inclut les paddings et marges */
