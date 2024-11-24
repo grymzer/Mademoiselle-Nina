@@ -226,7 +226,7 @@ label {
         padding: 10px 10px;
         width: 100%;
         box-sizing: border-box; /* Inclure les bordures dans la largeur */
-        margin: 20px 0;
+        margin-left: 50px;
         text-align: center;
     }
 
