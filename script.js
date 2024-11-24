@@ -21,20 +21,25 @@ function toggleArticle(article, checkbox) {
 
    // Fonction pour envoyer l'email de la commande
 document.getElementById('send-email-button').addEventListener('click', function () {
+    console.log("Articles sélectionnés pour l'envoi :", selectedArticles); // Debug
+
     if (selectedArticles.length === 0) {
         alert("Vous n'avez sélectionné aucun article !");
         return;
     }
 
-    // Liste des articles sélectionnés avec leur prix
+    // Génération de la commande
     let orderDetails = selectedArticles.map(article => {
-        return `- ${article.name} : ${article.price.toFixed(2)} €`;
+        if (article.name && article.price) {
+            return `- ${article.name} : ${article.price.toFixed(2)} €`;
+        } else {
+            console.error("Article mal formé :", article);
+            return "- Article invalide";
+        }
     }).join("\n");
 
-    // Calculer le total
-    let totalPrice = selectedArticles.reduce((total, article) => total + article.price, 0);
+    let totalPrice = selectedArticles.reduce((total, article) => total + (article.price || 0), 0);
 
-    // Message final
     const orderMessage = `
 Bonjour,
 
@@ -56,7 +61,7 @@ Gaëlle
 07 87 48 22 09
     `;
 
-    // Simuler l'envoi par e-mail
+    // Envoi de l'email
     window.location.href = `mailto:gaelle.dallongevile@gmail.com?subject=Demande de réservation&body=${encodeURIComponent(orderMessage)}`;
 });
 
