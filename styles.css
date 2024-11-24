@@ -219,14 +219,14 @@ label {
 
 @media (max-width: 480px) {
     /* Styles communs pour le header et footer */
-    header {
+    header, footer {
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 20px 20px;
         width: 100%;
         box-sizing: border-box; /* Inclure les bordures dans la largeur */
-        margin-left: 75px;
+        margin-left: 72,5px;
         text-align: center;
     }
 
@@ -309,7 +309,7 @@ label {
     .send-email {
         text-align: center;
         display: flex;
-        justify-content: center;
+        margin-left: 72px;
     }
 }
 @media (min-width: 481px) and (max-width: 768px) {
