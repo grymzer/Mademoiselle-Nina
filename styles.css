@@ -297,7 +297,7 @@ label {
     /* Carousel */
     .carousel {
         width: 100%;
-        max-width: 250px;
+        max-width: 300px;
         height: auto;
         margin: 0 auto; /* Centre le carousel */
     }
