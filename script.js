@@ -53,8 +53,7 @@ Pour un total de : ${totalPrice.toFixed(2)} € (le prix parfait pour une bonne 
 Pour régler cette belle commande, tu peux :
 
 1. M'envoyer un chèque à l’ordre de l’Association Aidons Agathe (promis, il sera encaissé avec un grand sourire).
-2. Me payer en liquide (mais attention, je n'accepte pas les chocolats en guise de monnaie, sauf exception...).
-3. Dernière option, pour les plus geeks d'entre vous, vous pouvez envoyer sur le compte Paypal de Julien au 0649009778
+2. Ou me payer en liquide (mais attention, je n'accepte pas les chocolats en guise de monnaie, sauf exception...).
 
 Encore merci et à bientôt,
 Gaëlle
