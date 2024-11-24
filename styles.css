@@ -238,7 +238,12 @@ label {
         padding: 10px; /* Espacement interne */
         justify-content: center; /* Alignement au centre */
     }
-
+    
+h1, h2 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
     h1, p {
         font-size: 1.2rem;
         text-align: center;
@@ -266,13 +271,16 @@ label {
     font-size: 0.9rem;
 }
     .carousel {
-        width: 150px;
-        height: 150px;
-    }
+    width: 150px;
+    height: auto; /* Ajuste automatiquement la hauteur */
+}
     .send-email button {
         width: 100%; /* Prend toute la largeur */
         max-width: none; /* Ignore la largeur maximale */
     }
+    .send-email {
+    text-align: center;
+}
 }
 @media (min-width: 481px) and (max-width: 768px) {
     .product-grid {
