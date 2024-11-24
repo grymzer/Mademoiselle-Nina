@@ -244,10 +244,11 @@ label {
     
     /* Conteneur des produits avec une seule colonne sur mobile */
     .products-container {
-        display: grid;
         grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
         gap: 15px; /* Réduire l'espacement entre les produits */
         padding: 10px; /* Ajouter un léger padding */
+        width: 100%;
+        max-width: 480px;
     }
 
     /* Style pour chaque produit */
