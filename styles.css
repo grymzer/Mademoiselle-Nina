@@ -336,6 +336,9 @@ p {
         text-decoration: none; /* Supprime les soulignements */
         color: inherit; /* Hérite de la couleur du texte environnant */
     }
+    .product {
+    max-width: calc(40% - 10px);
+}
 }
 @media (min-width: 481px) and (max-width: 768px) {
     .product-grid {
