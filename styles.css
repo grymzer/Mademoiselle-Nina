@@ -220,9 +220,13 @@ label {
 @media (max-width: 480px) {
     
     header, footer {
-        width: 100%; /* Utiliser toute la largeur disponible */
-        margin: 0; /* Supprimer les marges */
-        padding: 10px; /* Ajuster les espaces internes */
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
         box-sizing: border-box; /* Inclure les bordures dans la largeur */
     }
 
@@ -239,7 +243,24 @@ label {
         justify-content: center; /* Alignement au centre */
     }
     
-h1, h2 {
+     .products-container {
+        display: grid;
+        grid-template-columns: 1fr; /* Une seule colonne pour mobile */
+        gap: 15px; /* Réduire l'espacement entre les produits */
+        padding: 10px; /* Ajouter un léger padding */
+    }
+
+    .product-item {
+        max-width: 100%; /* Adapte chaque produit à la largeur de l'écran */
+        text-align: center;
+        padding: 10px;
+    }
+    .main-container {
+        margin: 0 auto; /* Centre le conteneur */
+        padding: 0 10px; /* Ajoute un léger padding pour éviter que les produits touchent les bords de l'écran */
+    }
+    
+    h1, h2 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
