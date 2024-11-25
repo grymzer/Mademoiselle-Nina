@@ -234,7 +234,7 @@ footer {
     padding: 20px 40px;
     width: 100%;
     box-sizing: border-box;
-    margin-left: 17%; /* Correction ici */
+    margin-left: 17% !important;
 }
     /* Grille de produits avec 2 colonnes */
      .product-grid {
