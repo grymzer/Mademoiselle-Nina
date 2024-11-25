@@ -219,7 +219,7 @@ label {
 
 @media (max-width: 480px) {
     /* Styles communs pour le header et footer */
-    header, footer {
+    header {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -229,7 +229,19 @@ label {
         margin-left: 15%;
         text-align: center;
     }
-
+    
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #000;
+    color: white;
+    text-align: center;
+    margin-left: 0; /* Correction ici */
+}
     /* Grille de produits avec 2 colonnes */
      .product-grid {
         display: grid;
