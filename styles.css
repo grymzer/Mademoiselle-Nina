@@ -247,7 +247,7 @@ footer {
         display: grid;
         grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
         gap: 10px; /* Espacement entre les produits */
-        margin-right: 50px; /* Centrer la grille */
+        margin-right: 20%; /* Centrer la grille */
         padding: 0 15px; /* Ajout de padding plus large sur les côtés */
         max-width: 100%; /* Limiter la largeur de la grille */
         box-sizing: border-box;
@@ -255,7 +255,7 @@ footer {
     /* Style pour chaque produit */
     .product {
         max-width: 100%; /* Suppression de la limite pour s'adapter au padding */
-        margin-right: 30px; /* Centre chaque produit dans sa colonne */
+        margin-right: 15%; /* Centre chaque produit dans sa colonne */
         padding: 10px;
         text-align: center;
         box-sizing: border-box; /* Inclut les paddings et marges */
