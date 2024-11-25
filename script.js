@@ -61,7 +61,7 @@ Gaëlle
     `;
 
     // Envoi de l'email
-    window.location.href = `mailto:gaelle.dallongevile@gmail.com?subject=Demande de réservation&body=${encodeURIComponent(orderMessage)}`;
+    window.location.href = `mailto:gaelle.dallongeville@gmail.com?subject=Demande de réservation&body=${encodeURIComponent(orderMessage)}`;
 });
 
 // Fonction pour passer à l'image suivante dans le carrousel
