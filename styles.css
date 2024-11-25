@@ -231,15 +231,9 @@ label {
     }
     
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 20px 40px;
     width: 100%;
     box-sizing: border-box;
-    background-color: #000;
-    color: white;
-    text-align: center;
     margin-left: 17%; /* Correction ici */
 }
     /* Grille de produits avec 2 colonnes */
