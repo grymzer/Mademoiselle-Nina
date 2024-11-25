@@ -315,7 +315,7 @@ footer {
     .send-email {
         text-align: center;
         display: flex;
-        margin-left: 35%;
+        margin-left: 36%;
     }
 }
 @media (min-width: 481px) and (max-width: 768px) {
