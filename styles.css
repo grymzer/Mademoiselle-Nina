@@ -230,11 +230,11 @@ label {
         text-align: center;
     }
     
-footer {
+body footer {
     padding: 20px 40px;
     width: 100%;
     box-sizing: border-box;
-    margin-left: 17% !important;
+    margin-left: 17%;
 }
     /* Grille de produits avec 2 colonnes */
      .product-grid {
