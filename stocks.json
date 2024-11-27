@@ -27,7 +27,7 @@
         "name": "Pochette livre format roman - rouge noël ",
         "price": 12.00,
         "images": ["Image 5.jpg", "Image 5_1.jpg", "Image 5_2.jpg"],
-        "stock": 1
+        "stock": 0
     },
     {
         "name": "Pochette livre de poche - champêtre bleu clair bleu - n°6 ",
@@ -75,13 +75,13 @@
         "name": "Petite pochette matelassée fleuri range bijoux 10*9cm",
         "price": 8.00,
         "images": ["Image 13.jpg", "Image 13_1.jpg"],
-        "stock": 5
+        "stock": 1
     },
     {
         "name": "Petite pochette bleu clair range bijoux 10*8cm",
         "price": 8.00,
         "images": ["Image 14.jpg", "Image 14_1.jpg"],
-        "stock": 1
+        "stock": 0
     },
     {
         "name": "5 turbans tissu coton",
@@ -141,7 +141,7 @@
         "name": "Banane velours violet Disney 33*18cm + doudou 29*29cm",
         "price": 30.00,
         "images": ["Image 24.jpg","Image 24_1.jpg","Image 24_2.jpg","Image 24_3.jpg"],
-        "stock": 1
+        "stock": 0
     },
     {
         "name": "Sac bowling velours violet intérieur Disney 53*34cm",
